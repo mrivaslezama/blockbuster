@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for blockbuster-patient-shadow-3229 on 2024-10-06T20:36:07-03:00
+# fly.toml app configuration file generated for blockbuster-rough-frost-6259 on 2024-10-11T00:44:20-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'blockbuster-patient-shadow-3229'
+app = 'blockbuster-rough-frost-6259'
 primary_region = 'scl'
 console_command = '/rails/bin/rails console'
 
