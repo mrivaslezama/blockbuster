@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_08_212335) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_11_013620) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,8 +19,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_08_212335) do
     t.string "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "movie"
     t.bigint "movie_id"
+    t.string "movie"
     t.index ["movie_id"], name: "index_clients_on_movie_id"
   end
 
@@ -28,9 +28,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_08_212335) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "client_id"
     t.bigint "movie_id"
     t.text "tags", default: [], array: true
+    t.bigint "client_id"
+    t.boolean "is_rented"
     t.index ["client_id"], name: "index_movies_on_client_id"
     t.index ["movie_id"], name: "index_movies_on_movie_id"
   end

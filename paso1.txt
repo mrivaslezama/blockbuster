@@ -1,4 +1,16 @@
 
+cambiar 
+ rented_movie a rented.html.erb ... (controlador, ruta y vista)
+
+Callback para un boton de retorno - funciòn de forma intermedia
+- despues de una acción ... (evento verificar )
+
+antes de guardar - ver si existe -si tiene un valor client_id 
+if nil - no existe el cliente - libera la pelicula
+
+
+
+
 cd Blockbuster
 rails 
 code .

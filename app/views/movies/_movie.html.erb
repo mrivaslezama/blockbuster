@@ -4,6 +4,12 @@
       <div class="card-body">
         <h5 class="card-title"><%= movie.name %></h5>
         <%= link_to "Show this movie", movie, class: "btn btn-primary" %>
+        <% if movie.is_rented  %>
+          <p>Pelicula no disponible</p>
+        <% else %>
+          <%= link_to "Rentar pelicula", rented_movie_movie_path(movie), class: "btn btn-success" %>        
+        <% end %>
+        
       </div>
     </div>
   </div>

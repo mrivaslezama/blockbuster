@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
-  before_action :set_movie, only: %i[ show edit update destroy ]
+  before_action :set_movie, only: %i[ show edit update destroy rented_movie]
   before_action :set_clients, only: %i[ new edit create destroy update]
-  has_many :tags
+
 
   # GET /movies or /movies.json
   def index
@@ -59,6 +59,10 @@ class MoviesController < ApplicationController
     end
   end
 
+  def rented_movie
+    @clients = Client.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_movie
@@ -71,6 +75,6 @@ class MoviesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def movie_params
-      params.require(:movie).permit(:name, :client_id, tags: [])
+      params.require(:movie).permit(:name, :client_id, :is_rented)
     end
 end

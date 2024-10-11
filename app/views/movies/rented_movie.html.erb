@@ -1,0 +1,7 @@
+
+<%= form_with model: @movie do |form| %>
+    <%= form.label  "Client" %>
+    <%= form.collection_select :client_id, @clients, :id, :name, {include_blank:true} %>
+    <%= form.hidden_field :is_rented, value:true%>
+    <%= form.submit %>
+<% end %>
